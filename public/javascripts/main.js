@@ -20,7 +20,7 @@ require.config({
 	},
 	urlArgs: "bust=" + (new Date()).getTime() //仅用于调试，环境中删除
 });
-define(['angular', 'jquery', 'uirouter', 'app'], 
+define(['angular', 'jquery', 'app'], 
 		function(angular, app, permission) {
 			'use strict';
 

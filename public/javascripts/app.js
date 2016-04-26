@@ -1,17 +1,17 @@
-define(['angular', 'ui-router'],
+define(['angular', 'uirouter'],
 	function(angular) {
 		return angular
-			.module("adminApp", ['ui-router']).
-			config(['$stateProvider', '$urlRouterProvider', '$locationProvider', function($stateProvider, $urlRouterProvider, $locationProvider) {
+			.module("adminApp", ['ui.router']).
+			config(['$stateProvider', '$urlRouterProvider',  function($stateProvider, $urlRouterProvider) {
 		    $stateProvider.
 		      state('state1', {
 		      	url: '/state1',
 		        templateUrl: 'index'
 		      }).
-		      when('state2', {
+		      state('state2', {
 		      	url: '/state2',
 		        templateUrl: 'error'
-		      }).
-		    $locationProvider.html5Mode(true);
+		      })
+		    /*$locationProvider.html5Mode(true);*/
 		  }]);
 	});
